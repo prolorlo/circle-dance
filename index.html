@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <title>Circle Dance</title>
+</head>
+<body>
+    <i class="fas fa-cog fa-2x" onclick="setting()"></i>
+    <div class="setBox">
+        <div class="setting" style="display: none;">
+            <h1>SETTING</h1>
+            <div class="formBox">
+                <input type="text" class="sizeBtn" placeholder="CIRCLE SIZE">
+                <span>DEFAULT:100</span><br>
+                <button onclick="circleSize()">CHANGE</button><br>
+                <input type="text" class="colorBtn" placeholder="CIRCLE COLOR">
+                <span>DEFAULT:Dodgerblue</span><br>
+                <button onclick="circleColor()">CHANGE</button><br>
+            </div>
+        </div>
+    </div>
+    <div class="btn_box">
+        <button class="btn move">MOVE</button>
+        <button class="btn add">ADD</button><br><br>
+        <button class="btn addten">ADD X 10</button>
+        <button class="btn remove">REMOVE</button>
+        <br><br><br>
+    </div>
+    <div class="circle_box">
+        <div class="circle"></div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
