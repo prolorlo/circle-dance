@@ -23,12 +23,44 @@ add[0].addEventListener("click", function () {
     let newCircle = document.createElement("div");
     newCircle.className = "circle";
     circle_box[0].appendChild(newCircle);
+    if (circle[0].style.width !== '' && circle[0].style.backgroundColor !== '') {
+        for (i = 0; i < 500; i++) {
+            circle[i].style.width = sizeBtn[0].value + "px";
+            circle[i].style.height = sizeBtn[0].value + "px";
+            circle[i].style.backgroundColor = colorBtn[0].value;
+        }
+    } else if (circle[0].style.width !== '') {
+        for (i = 0; i < 500; i++) {
+            circle[i].style.width = sizeBtn[0].value + "px";
+            circle[i].style.height = sizeBtn[0].value + "px";
+        }
+    } else if (circle[0].style.backgroundColor !== '') {
+        for (i = 0; i < 500; i++) {
+            circle[i].style.backgroundColor = colorBtn[0].value;
+        }
+    }
 })
 addten[0].addEventListener("click", function () {
     for (i = 0; i < 10; i++){
         let newCircle = document.createElement("div");
         newCircle.className = "circle";
         circle_box[0].appendChild(newCircle);
+    }
+    if (circle[0].style.width !== '' && circle[0].style.backgroundColor !== '') {
+        for (i = 0; i < 500; i++) {
+            circle[i].style.width = sizeBtn[0].value + "px";
+            circle[i].style.height = sizeBtn[0].value + "px";
+            circle[i].style.backgroundColor = colorBtn[0].value;
+        }
+    } else if (circle[0].style.width !== '') {
+        for (i = 0; i < 500; i++) {
+            circle[i].style.width = sizeBtn[0].value + "px";
+            circle[i].style.height = sizeBtn[0].value + "px";
+        }
+    } else if (circle[0].style.backgroundColor !== '') {
+        for (i = 0; i < 500; i++) {
+            circle[i].style.backgroundColor = colorBtn[0].value;
+        }
     }
 })
 remove[0].addEventListener("click", function () {
@@ -55,3 +87,21 @@ function circleColor() {
         circle[i].style.backgroundColor = colorBtn[0].value;
     }
 }
+
+function spacebar() {
+    if(window.event.keyCode == 32) {
+        for (i = 0; i < 500; i++) {
+            if (Math.random() > 0.5) {
+                var plusMinus = "+"
+            } else {
+                var plusMinus = "-"
+            }
+            let randomhorizontal = Math.random() * 500;
+            let randomvertical = Math.random() * 500;
+            circle[i].style.top = `${plusMinus}` + `${randomhorizontal}`+"px";
+            circle[i].style.left = `${plusMinus}` + `${randomvertical}`+"px";
+        }
+    }
+}
+
+window.addEventListener("keydown", spacebar);
